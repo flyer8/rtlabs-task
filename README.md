@@ -1,18 +1,11 @@
-docker run -d --rm --name rtlabs-app -p 80:80 -p 443:443 -P flyer8/rtlabs-app
-
-The below requirements are needed on the host that executes this module.
-
-python >= 2.6
-docker-py >= 1.7.0
-
+The deployment was performed on Linux Mint 18.1 (Ubuntu 16.04) with Ansible v. 2.7.6, Docker version 17.09.0-ce installed.
+Also docker-py >= 1.7.0 library must be installed.
+```
 pip install docker-py
+```
 
-ansible-playbook -i inventory playbook.yml
-
-./sysinfo.sh index.html || true
-
-bash -c "bash sysinfo.sh index.html || true"
-
-docker exec -it rtlabs-app /bin/bash /var/www/html/sysinfo2.sh /var/www/html/index.html
-
-ansible-playbook -i /opt/rtlabs-task/inventory playbook.yml
+For deploying service you should execute next commands:
+```
+git clone https://github.com/flyer8/rtlabs-task.git /opt/rtlabs-task
+ansible-playbook -i /opt/rtlabs-task/inventory /opt/rtlabs-task/playbook.yml
+```
