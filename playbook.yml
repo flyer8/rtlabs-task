@@ -16,7 +16,7 @@
   - name: Run Docker container
     docker_container:
       name: rtlabs-app
-      hostname: test-srv.rtlabs.com
+      hostname: test-srv.rtlabs.local
       image: flyer8/rtlabs-app
       state: started
       restart_policy: always

@@ -14,7 +14,7 @@ LOAD_GREEN=0.2
 LOAD_RED=0.8
 
 # Your network info
-MYNETINFO="Host status"
+MYNETINFO="Hi RTLabs Team. This is test task by Sergey Shimanskiy"
 #
 PBY='This information is updated every minute'
 
@@ -62,7 +62,7 @@ tr.orangerow {
 </style>
    </head>
    <body>'
-echo "<h1>$MYNETINFO</h1>"
+echo "<h2>$MYNETINFO</h2>"
 echo "<p>Generated on $NOW.</p>"
 }
 
@@ -179,9 +179,9 @@ echo "$rfs"
 echo "</tbody></table>"
 echo "</li>"
 echo "<li>Reboot needed (apply updates): ${REBOOT_NEEDED}</li>"
-echo "<li>CPU/RAM usage per user:"
-echo "<table class=\"gridtable\"><thead><tr><th>Username</th><th>CPU</th><th>RAM</th></tr></thead>"
-echo "<tbody>${user_processes_body}</tbody></table>"
+#echo "<li>CPU/RAM usage per user:"
+#echo "<table class=\"gridtable\"><thead><tr><th>Username</th><th>CPU</th><th>RAM</th></tr></thead>"
+#echo "<tbody>${user_processes_body}</tbody></table>"
 echo "</li>"
 echo "</ul>"
 fi
