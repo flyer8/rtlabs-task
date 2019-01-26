@@ -3,7 +3,7 @@
   become: yes
   tasks:
 
-  - name: Build Image
+  - name: Build Docker image
     docker_image:
       state: present
       path: /opt/rtlabs-task 	# Here should specify an absolute path
@@ -13,7 +13,7 @@
 #  - name: Build Docker images
 #    command: /usr/bin/docker build -t flyer8/rtlabs-app /opt/rtlabs-task
 
-  - name: Run container
+  - name: Run Docker container
     docker_container:
       name: rtlabs-app
       hostname: test-srv.rtlabs.com
@@ -26,7 +26,7 @@
       - "443:443"
       - "22"
 
-  - name: Start ssh service
+  - name: Start ssh service in Docker container
     command: /usr/bin/docker exec rtlabs-app /usr/sbin/service ssh start
 
   - name: Script execute in Docker container
