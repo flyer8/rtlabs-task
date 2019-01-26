@@ -5,7 +5,7 @@ Also Docker SDK for Python must be installed. https://pypi.org/project/docker/
 pip install docker
 ```
 
-For deploying service you should execute following commands:
+For deploying service on localhost you should execute following commands:
 ```
 git clone https://github.com/flyer8/rtlabs-task.git /opt/rtlabs-task
 ansible-playbook -i /opt/rtlabs-task/inventory /opt/rtlabs-task/playbook.yml
