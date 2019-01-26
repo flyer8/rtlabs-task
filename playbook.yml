@@ -1,0 +1,33 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+
+  - name: Build Image
+    docker_image:
+      state: present
+      path: /opt/rtlabs-task 	# Here should specify an absolute path
+      dockerfile: Dockerfile
+      name: flyer8/rtlabs-app
+
+#  - name: Build Docker images
+#    command: /usr/bin/docker build -t flyer8/rtlabs-app /opt/rtlabs-task
+
+  - name: Run container
+    docker_container:
+      name: rtlabs-app
+      hostname: test-srv.rtlabs.com
+      image: flyer8/rtlabs-app
+      state: started
+      restart_policy: always
+#      command: bash -c "nginx -g 'daemon off;'"
+      ports:
+      - "80:80"
+      - "443:443"
+      - "22"
+
+  - name: Start ssh service
+    command: /usr/bin/docker exec rtlabs-app /usr/sbin/service ssh start
+
+  - name: Script execute in Docker container
+    command: /usr/bin/docker exec rtlabs-app /bin/bash /var/www/html/sysinfo2.sh /var/www/html/index.html
