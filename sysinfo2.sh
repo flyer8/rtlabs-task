@@ -115,8 +115,8 @@ rfs="$(LANG=C df -hTl 2>/dev/null | grep -vE "^Filesystem|shm" |
    }
   }')"
 
-rusedram="$(LANG=C free -mt | grep 'buffers/cache' | awk '{print $3}')"
-rfreeramout="$(LANG=C free -mt | grep 'buffers/cache' | awk '{print $4}')"
+rusedram="$(LANG=C free -mt | grep Mem: | awk '{print $3}')"
+rfreeramout="$(LANG=C free -mt | grep Mem: | awk '{print $4}')"
 rtotalram="$(LANG=C free -mt | grep Mem: | awk '{ print $2 }')"
 
 rfreeram="1"
