@@ -1,3 +1,5 @@
+## Ansible playbook for deploying Nginx Docker container with generating sysinfo html page
+
 The deployment was performed on Linux Mint 18.1 (Ubuntu 16.04) with Ansible v. 2.7.6; Docker v. 17.09.0-ce installed.
 
 Also Docker SDK for Python must be installed. https://pypi.org/project/docker/
