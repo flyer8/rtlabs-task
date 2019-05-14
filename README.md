@@ -9,7 +9,7 @@ pip install docker
 
 For deploying service on localhost you should execute following commands:
 ```
-git clone https://github.com/flyer8/sysinfo-task.git /opt/rtlabs-task
-ansible-playbook -i /opt/rtlabs-task/inventory /opt/rtlabs-task/playbook.yml
+git clone https://github.com/flyer8/sysinfo-task.git /opt/sysinfo-task
+ansible-playbook -i /opt/sysinfo-task/inventory /opt/sysinfo-task/playbook.yml
 ```
 ![](rtlabs-task.png)
