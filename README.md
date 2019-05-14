@@ -12,4 +12,4 @@ For deploying service on localhost you should execute following commands:
 git clone https://github.com/flyer8/sysinfo-task.git /opt/sysinfo-task
 ansible-playbook -i /opt/sysinfo-task/inventory /opt/sysinfo-task/playbook.yml
 ```
-![](rtlabs-task.png)
+Then you can get an access to html page via browser using IP 127.0.0.1
