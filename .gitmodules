@@ -1,0 +1,3 @@
+[submodule "code/sysinfo"]
+	path = code/sysinfo
+	url = https://github.com/flyer8/sysinfo
